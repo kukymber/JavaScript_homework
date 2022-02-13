@@ -1,11 +1,19 @@
 // var basket = [[1, "булка", 15, 2],[2, "колач", 45, 1],[3, "хлеб", 25, 3],[4, "печенье", 65, 1],[5, "сырник", 15, 5]];
 class PriceBasket{
-    constructor(index, items, costs, amount){
+    constructor(index, items, costs, amount, x){
         this.index = index;  // сделать автоинкрементом
         this.items = items;
         this.costs = costs;
         this.amount = amount;
+        this.x = x;
     }
+    askMore(x){
+        if (x === '-1'){
+            CountPrice.countBasketPrice;// вызвать функцию подсчета 
+        } else{
+            GetBasket();// вызвать функцию запроса товаров
+        }
+        }
 }
 
 class CountPrice extends PriceBasket{
@@ -36,21 +44,21 @@ class GetBasket extends PriceBasket{
     }
 }
 
-class AskMore extends PriceBasket{
-    // нужно ли продолжать цикл наполнение или вывести результат
-    constructor()
-    askMore(x){
-    if (x === '-1'){
-        CountPrice;// вызвать функцию подсчета 
-    } else{
-        GetBasket;// вызвать функцию запроса товаров
-    }
-    }
-}
+// class AskMore extends PriceBasket{
+//     // нужно ли продолжать цикл наполнение или вывести результат
+//     constructor()
+//     askMore(x){
+//     if (x === '-1'){
+//         CountPrice;// вызвать функцию подсчета 
+//     } else{
+//         GetBasket;// вызвать функцию запроса товаров
+//     }
+//     }
+// }
 
 const chris = new PriceBasket(+prompt("Введите число"), prompt("Введите название товара"),
-    +prompt("Введите цену товара"), +prompt("Введите кол-во товара"))
- new GetBasket();
- new CountPrice();
- new AskMore(prompt());
- alert(AskMore);
+    +prompt("Введите цену товара"), +prompt("Введите кол-во товара"), prompt())
+ const getbask = new GetBasket();
+  alert(chris.askMore());
+ alert(chris);
+ alert(getbask.getBasket());
