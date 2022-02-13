@@ -14,7 +14,7 @@ class PriceBasket{
                      'количество товара':this.amount};
     }
     countBasketPrice(){
-        alert(this.basket);
+        return alert(this.basket);
 }}
 
 let drug = new PriceBasket();
